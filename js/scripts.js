@@ -44,6 +44,6 @@ $(function (){
 
     var newPizza = new Pizza(inputSize, inputTopping)
     newPizza.calculateCost();
-    $(".result").text(newPizza.cost);
+    $(".result").text("$" + newPizza.cost);
   })
 })

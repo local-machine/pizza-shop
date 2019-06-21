@@ -1,6 +1,6 @@
 # Pizza-Pie
 
-#### _A web site that outputs responses based on an input number - June 21, 2019_
+#### _A Pizza shop website that estimates the cost of your pizza. - June 21, 2019_
 
 #### _By **Jessica Munoz**_
 
