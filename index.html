@@ -13,24 +13,21 @@
       <h1>Crusty's Pizza Pies</h1>
       <form>
         <div class="form-group">
-          <p>Choose a Movie:</p>
+          <p>Choose your pizza toppings:</p>
+          <input type="checkbox" name="work-transportation" value="bike"> Riding a bike.<br>
+          <input type="checkbox" name="work-transportation" value="car">Driving a car.<br>
+          <input type="checkbox" name="work-transportation" value="carpool">Carpooling with others.<br>
+          <hr>
+          <p>Select your pizza size:</p>
           <select class="form-control" id="movie">
             <option value="madmax">Mad Max</option>
             <option value="avengers">Avengers</option>
             <option value="pikachu">Detective Pikachu</option>
           </select>
         </div>
-        <div class="form-group">
-          <p>Choose Your Age Group:</p>
-          <select class="form-control" id="age">
-            <option value="child">Child</option>
-            <option value="adult">Adult</option>
-            <option value="senior">Senior</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-info">Get Ticket Price</button>
+        <button type="submit" class="btn btn-info">Get Pizza Price</button>
       </form>
-      <p>Your ticket will cost: <span class="result"></span></p>
+      <p>Your pizza will cost: <span class="result"></span></p>
     </div>
   </body>
 </html>
