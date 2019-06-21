@@ -1,38 +1,51 @@
 // Business Logic
-function Pizza(topping, size) {
-  this.topping = topping,
+function Pizza(size, userTopResponses) {
+  // debugger;
+  this.topping = userTopResponses,
   this.size = size,
-  this.cost; // run it and see it this needs to be listing
+  this.cost;
 }
 
 Pizza.prototype.calculateCost = function() {
+  // debugger;
   this.cost = 0;
-  if (this.movie === "madmax" || this.movie === "avengers") {
-    this.cost += 8;
+  if (this.size === "large") {
+    this.cost += 20;
+  } else if (this.size === "medium") {
+    this.cost += 15;
   } else {
     this.cost += 10;
   }
-  if (this.age === "adult") {
-    this.cost += 5;
-  } else if (this.age === "senior") {
+  for (var i=0; i<this.topping.length; i++) {
     this.cost += 2;
-  } else {
-    return this.cost;
   }
 }
 
+
 // User Interface Logic
 $(function (){
-  $("form").submit(function(event) {
+  $("form#make-pizza").submit(function(event) {
     event.preventDefault();
 
-    var inputMovie = $("#movie").val();
-    var inputTime = $("#time").val();
-    var inputAge = $("#age").val();
+    $("#pizza-order").show();
+    $("input:checkbox[name=pizza-toppings]:checked").each(function(){
+      var topSelectedList = $(this).val();
+      $('#pizza-order').append(topSelectedList + "<br>");
+    });
 
-    var newTicket = new Ticket(inputMovie, inputTime, inputAge)
-    newTicket.calculateCost();
-    $(".result").text(newTicket.cost);
-    // alert(newTicket.cost);
+    var userTopResponses = [];
+    $("input:checkbox[name=pizza-toppings]:checked").each(function(){
+    var topSelectedList = $(this).val();
+    userTopResponses.push(topSelectedList);
+    });
+
+    $('#make-pizza').hide();
+
+    var inputSize = $("#size").val();
+    var inputTopping = userTopResponses;
+
+    var newPizza = new Pizza(inputSize, inputTopping)
+    newPizza.calculateCost();
+    $(".result").text(newPizza.cost);
   })
 })

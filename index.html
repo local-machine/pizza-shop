@@ -11,23 +11,40 @@
   <body>
     <div class="container">
       <h1>Crusty's Pizza Pies</h1>
-      <form>
+      <form id="make-pizza">
         <div class="form-group">
-          <p>Choose your pizza toppings:</p>
-          <input type="checkbox" name="work-transportation" value="bike"> Riding a bike.<br>
-          <input type="checkbox" name="work-transportation" value="car">Driving a car.<br>
-          <input type="checkbox" name="work-transportation" value="carpool">Carpooling with others.<br>
+          <p>Pizza Pie Toppings:</p>
+          <div class="row row-no-gutters">
+            <div class="col-sm-4">
+              <h4>Meaty Treaties</h4>
+              <input type="checkbox" name="pizza-toppings" value="Sausage">Sausage<br>
+              <input type="checkbox" name="pizza-toppings" value="Pepperoni">Pepperoni<br>
+              <input type="checkbox" name="pizza-toppings" value="Bacon">Bacon<br>
+              <input type="checkbox" name="pizza-toppings" value="SpicyItalianSausage">Spicy Italian Sausage<br>
+            </div>
+            <div class="col-sm-4">
+              <h4>Edgy Veggies</h4>
+              <input type="checkbox" name="pizza-toppings" value="Mushroom">Mushrooms<br>
+              <input type="checkbox" name="pizza-toppings" value="Spinach">Spinach<br>
+              <input type="checkbox" name="pizza-toppings" value="RedOnion">Red Onion<br>
+              <input type="checkbox" name="pizza-toppings" value="BellPeppers">Bell Peppers<br>
+            </div>
+          </div>
           <hr>
-          <p>Select your pizza size:</p>
-          <select class="form-control" id="movie">
-            <option value="madmax">Mad Max</option>
-            <option value="avengers">Avengers</option>
-            <option value="pikachu">Detective Pikachu</option>
+          <p>Pizza Pie Size:</p>
+          <select class="form-control" id="size">
+            <option value="large">Large</option>
+            <option value="medium">Medium</option>
+            <option value="small">Small</option>
           </select>
         </div>
+        <hr>
         <button type="submit" class="btn btn-info">Get Pizza Price</button>
       </form>
-      <p>Your pizza will cost: <span class="result"></span></p>
+      <span id="pizza-order">
+        <p><b>Your pizza will cost: </b><span class="result"></span></p>
+  <p><b>You selected the following pizza toppings: </b></p>
+    </span>
     </div>
   </body>
 </html>
