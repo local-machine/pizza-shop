@@ -6,11 +6,21 @@ h1 {
   font-stretch: extra-expanded;
   text-align: center;
 }
+
 body {
   font-family: 'Share', cursive;
   background-color: #f9f2ec;
 }
+
 h3 {
   font-stretch: extra-expanded;
   text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+  float: right;
 }
