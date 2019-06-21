@@ -1,3 +1,16 @@
 #pizza-order {
   display: none;
 }
+h1 {
+  font-family: 'Monoton', cursive;
+  font-stretch: extra-expanded;
+  text-align: center;
+}
+body {
+  font-family: 'Share', cursive;
+  background-color: #f9f2ec;
+}
+h3 {
+  font-stretch: extra-expanded;
+  text-align: center;
+}

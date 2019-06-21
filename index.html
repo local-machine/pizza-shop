@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Share&display=swap" rel="stylesheet">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Crusty's Pizza Pies</title>
@@ -11,16 +12,17 @@
   <body>
     <div class="container">
       <h1>Crusty's Pizza Pies</h1>
+      <h3>Choose your toppings and size to learn the price of your pie!</h3>
+      <hr>
       <form id="make-pizza">
         <div class="form-group">
-          <p>Pizza Pie Toppings:</p>
-          <div class="row row-no-gutters">
+          <div class="row">
             <div class="col-sm-4">
               <h4>Meaty Treaties</h4>
-              <input type="checkbox" name="pizza-toppings" value="Sausage">Sausage<br>
+              <input type="checkbox" name="pizza-toppings" value="Meatball">Meatball<br>
               <input type="checkbox" name="pizza-toppings" value="Pepperoni">Pepperoni<br>
               <input type="checkbox" name="pizza-toppings" value="Bacon">Bacon<br>
-              <input type="checkbox" name="pizza-toppings" value="SpicyItalianSausage">Spicy Italian Sausage<br>
+              <input type="checkbox" name="pizza-toppings" value="ItalianSausage">Italian Sausage<br>
             </div>
             <div class="col-sm-4">
               <h4>Edgy Veggies</h4>
@@ -29,17 +31,18 @@
               <input type="checkbox" name="pizza-toppings" value="RedOnion">Red Onion<br>
               <input type="checkbox" name="pizza-toppings" value="BellPeppers">Bell Peppers<br>
             </div>
-          </div>
-          <hr>
-          <p>Pizza Pie Size:</p>
-          <select class="form-control" id="size">
-            <option value="large">Large</option>
-            <option value="medium">Medium</option>
-            <option value="small">Small</option>
-          </select>
+            <div class="col-sm-4">
+              <p>Pizza Pie Size:</p>
+              <select class="form-control" id="size">
+                <option value="large">Large</option>
+                <option value="medium">Medium</option>
+                <option value="small">Small</option>
+              </select>
+            </div>
+        </div>
         </div>
         <hr>
-        <button type="submit" class="btn btn-info">Get Pizza Price</button>
+        <button type="submit" class="btn btn-danger">Get Pizza Price</button>
       </form>
       <span id="pizza-order">
         <p><b>Your pizza will cost: </b><span class="result"></span></p>

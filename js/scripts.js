@@ -1,13 +1,11 @@
 // Business Logic
 function Pizza(size, userTopResponses) {
-  // debugger;
   this.topping = userTopResponses,
   this.size = size,
   this.cost;
 }
 
 Pizza.prototype.calculateCost = function() {
-  // debugger;
   this.cost = 0;
   if (this.size === "large") {
     this.cost += 20;
